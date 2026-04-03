@@ -1,0 +1,83 @@
+/* Para telas menores que 600px */
+@media (max-width: 600px) {
+    #calculadora { padding: 15px; }
+    #titulo { margin-bottom: 20px; }
+}
+
+body {
+    background-color: blanchedalmond; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+#titulo {
+    color: #5e9b9b;
+    letter-spacing: 2px;
+    font-size: clamp(2rem, 8vw, 4rem);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#calculadora {
+    background-color: cadetblue;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    color: blanchedalmond;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Deixa os itens um embaixo do outro */
+    gap: 15px; /* Espaçamento uniforme entre os elementos */
+    box-sizing: border-box;
+}
+
+/* Agrupando inputs para ficarem na mesma linha se houver espaço */
+.input-group {
+    display: flex;
+    flex-wrap: wrap; /* Quebra linha se não couber */
+    justify-content: center;
+    gap: 10px;
+}
+
+input, #operador, #botaoCalcular {
+    background-color: blanchedalmond;
+    color: cadetblue;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#operador {
+    background-color: #4a7e7e;
+    color: blanchedalmond;
+    cursor: pointer;
+}
+
+#botaoCalcular {
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    margin-top: 10px;
+}
+
+/* Efeito ao passar o mouse */
+#botaoCalcular:hover {
+    background-color: #ffebcd;
+    transform: scale(1.02);
+}
+
+#creditos, #link {
+    color: cadetblue;
+    text-align: center;
+    font-weight: bold;
+}
